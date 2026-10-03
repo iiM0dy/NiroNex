@@ -1,0 +1,7 @@
+<FilesMatch "^(\.env|\.env\..*|artisan|composer\.(json|lock)|package(-lock)?\.json|phpunit\.xml|vite\.config\.js)$">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public
+RewriteRule ^(.*)$ public/$1 [L]

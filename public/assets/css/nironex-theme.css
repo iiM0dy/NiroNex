@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body.theme-nironex {
+    --lira-bg: #0d1117;
+    --lira-bg-alt: #121826;
+    --lira-bg-2: #121826;
+    --lira-bg-elevated: #101726;
+    --lira-surface: rgba(18, 24, 38, 0.9);
+    --lira-surface-2: rgba(19, 28, 43, 0.96);
+    --lira-surface-3: rgba(24, 36, 54, 0.98);
+    --lira-border: rgba(167, 176, 192, 0.16);
+    --lira-border-strong: rgba(167, 176, 192, 0.28);
+    --lira-text: #f4f6fa;
+    --lira-text-soft: #dce5f0;
+    --lira-text-muted: #a7b0c0;
+    --lira-gold: #00e6a7;
+    --lira-gold-strong: #1a2bff;
+    --lira-gold-soft: rgba(0, 230, 167, 0.12);
+    --lira-auth-gold: #00e6a7;
+    --lira-auth-gold-strong: #1a2bff;
+    --lira-auth-gold-soft: rgba(0, 230, 167, 0.12);
+    --hp-gold: #00e6a7;
+    --hp-gold-strong: #38bdf8;
+    --hp-gold-10: rgba(0, 230, 167, 0.1);
+    --hp-gold-12: rgba(0, 230, 167, 0.12);
+    --hp-gold-22: rgba(0, 230, 167, 0.22);
+    --hp-gold-25: rgba(0, 230, 167, 0.25);
+    --lira-success: #00e6a7;
+    --lira-warning: #7861ff;
+    --lira-info: #38bdf8;
+    --lira-danger: #ff6b81;
+    --nironex-border: rgba(167, 176, 192, 0.18);
+    --nironex-text: #f4f6fa;
+    --nironex-muted: #a7b0c0;
+    --nironex-accent: #00e6a7;
+    --nironex-accent-2: #1a2bff;
+    --nironex-accent-3: #7861ff;
+    --nironex-accent-soft: rgba(0, 230, 167, 0.08);
+    --nironex-warning: #7861ff;
+    --nironex-warning-soft: rgba(120, 97, 255, 0.12);
+    --nironex-warning-border: rgba(120, 97, 255, 0.24);
+    --nironex-warning-text: #c4b6ff;
+    --nironex-glow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    --bs-warning: #7861ff;
+    --bs-warning-rgb: 120, 97, 255;
+    font-family: "Poppins", "Cairo", sans-serif !important;
+    background: linear-gradient(180deg, #0d1117 0%, #0d1117 58%, #0b1017 100%) !important;
+}
+
+body.theme-nironex::before {
+    background-image:
+        linear-gradient(rgba(167, 176, 192, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 176, 192, 0.02) 1px, transparent 1px) !important;
+    background-size: 48px 48px !important;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.32), transparent 88%) !important;
+}
+
+body.theme-nironex::after {
+    display: none !important;
+}
+
+body.theme-nironex,
+body.theme-nironex p,
+body.theme-nironex span,
+body.theme-nironex li,
+body.theme-nironex small,
+body.theme-nironex label,
+body.theme-nironex input,
+body.theme-nironex textarea,
+body.theme-nironex select,
+body.theme-nironex button {
+    font-family: "Poppins", "Cairo", sans-serif !important;
+}
+
+body.theme-nironex h1,
+body.theme-nironex h2,
+body.theme-nironex h3,
+body.theme-nironex h4,
+body.theme-nironex h5,
+body.theme-nironex h6,
+body.theme-nironex .hero-title,
+body.theme-nironex .brand-name,
+body.theme-nironex .modal-title,
+body.theme-nironex .page-title,
+body.theme-nironex .lira-page-title {
+    font-family: "Poppins", "Cairo", sans-serif !important;
+    letter-spacing: -0.04em;
+}
+
+body.theme-nironex .niro-icon {
+    width: 1.1em;
+    height: 1.1em;
+    display: inline-block;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    color: #5d94ff;
+}
+
+body.theme-nironex .niro-icon--current {
+    color: currentColor !important;
+}
+
+body.theme-nironex .niro-icon--dashboard,
+body.theme-nironex .niro-icon--markets,
+body.theme-nironex .niro-icon--globe,
+body.theme-nironex .niro-icon--home {
+    color: #5d94ff;
+}
+
+body.theme-nironex .niro-icon--signals,
+body.theme-nironex .niro-icon--robot,
+body.theme-nironex .niro-icon--support,
+body.theme-nironex .niro-icon--bell,
+body.theme-nironex .niro-icon--security,
+body.theme-nironex .niro-icon--status,
+body.theme-nironex .niro-icon--login {
+    color: #00e6a7;
+}
+
+body.theme-nironex .niro-icon--portfolio,
+body.theme-nironex .niro-icon--academy,
+body.theme-nironex .niro-icon--wallet,
+body.theme-nironex .niro-icon--settings,
+body.theme-nironex .niro-icon--profile,
+body.theme-nironex .niro-icon--users,
+body.theme-nironex .niro-icon--transfer,
+body.theme-nironex .niro-icon--logout {
+    color: #7861ff;
+}
+
+body.theme-nironex .lira-bottom-nav-item .niro-icon,
+body.theme-nironex .lira-bottom-nav-item.active .niro-icon,
+body.theme-nironex .lira-trading-bottom-nav .niro-icon,
+body.theme-nironex .lira-trading-bottom-nav .lira-bottom-nav-item.active .niro-icon {
+    color: currentColor !important;
+}
+
+body.theme-nironex :is(i.fa, i.fa-solid, i.fa-regular, i.fa-brands, i.fas, i.far, i.lni, i.bi) {
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+@supports (-webkit-text-stroke: 1px currentColor) {
+    body.theme-nironex :is(i.fa, i.fa-solid, i.fa-regular, i.fa-brands, i.fas, i.far, i.lni, i.bi) {
+        -webkit-text-stroke: 1.05px currentColor;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+body.theme-nironex :is(.btn, .lira-menu-cta, .lira-site-main-btn, .hp-btn-gold, .hp-btn-hero, .hp-cta-demo-btn, .scroll-top) :is(i.fa, i.fa-solid, i.fa-regular, i.fa-brands, i.fas, i.far, i.lni, i.bi) {
+    color: currentColor !important;
+}
+
+body.theme-nironex .card,
+body.theme-nironex .modal-content,
+body.theme-nironex .dropdown-menu,
+body.theme-nironex .list-group-item,
+body.theme-nironex .popup-card,
+body.theme-nironex .lira-mobile-nav-item .nav-link,
+body.theme-nironex .lira-site-footer-note,
+body.theme-nironex .lira-topbar-chip,
+body.theme-nironex .lira-admin-chip,
+body.theme-nironex .lira-userbox,
+body.theme-nironex .lira-admin-userbox,
+body.theme-nironex .lira-site-link-btn {
+    background: rgba(18, 24, 38, 0.94) !important;
+    border-color: var(--nironex-border) !important;
+    box-shadow: var(--nironex-glow) !important;
+}
+
+body.theme-nironex .header.navbar-area,
+body.theme-nironex .lira-site-header .nav-inner,
+body.theme-nironex .lira-topbar,
+body.theme-nironex .lira-admin-topbar,
+body.theme-nironex .lira-sidebar,
+body.theme-nironex .lira-admin-sidebar-top,
+body.theme-nironex .lira-admin-sidebar-bottom,
+body.theme-nironex #liraPublicNavbar {
+    background: rgba(13, 17, 23, 0.92) !important;
+    border-color: var(--nironex-border) !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.theme-nironex .footer,
+body.theme-nironex .lira-site-footer,
+body.theme-nironex .copyright-area {
+    background: rgba(13, 17, 23, 0.96) !important;
+}
+
+body.theme-nironex .btn-primary,
+body.theme-nironex .bg-primary,
+body.theme-nironex .header .button .btn,
+body.theme-nironex .lira-site-main-btn,
+body.theme-nironex .btn-submit,
+body.theme-nironex .login-form .button .btn,
+body.theme-nironex .register-form .button .btn,
+body.theme-nironex .lira-menu-cta-primary {
+    background: var(--nironex-accent) !important;
+    border: 1px solid rgba(0, 230, 167, 0.85) !important;
+    color: #0d1117 !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14) !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+}
+
+body.theme-nironex :is(.btn, .button .btn, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary, .lira-menu-cta-outline, .hp-btn-gold, .hp-btn-hero, .hp-cta-demo-btn, .scroll-top) {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.theme-nironex :is(.btn, .button .btn, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary, .lira-menu-cta-outline, .hp-btn-gold, .hp-btn-hero, .hp-cta-demo-btn, .scroll-top):focus,
+body.theme-nironex :is(.btn, .button .btn, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary, .lira-menu-cta-outline, .hp-btn-gold, .hp-btn-hero, .hp-cta-demo-btn, .scroll-top):focus-visible,
+body.theme-nironex :is(.btn, .button .btn, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary, .lira-menu-cta-outline, .hp-btn-gold, .hp-btn-hero, .hp-cta-demo-btn, .scroll-top):active,
+body.theme-nironex .btn-check:focus + .btn,
+body.theme-nironex .btn-check:checked + .btn {
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+body.theme-nironex .btn-primary:hover,
+body.theme-nironex .header .button .btn:hover,
+body.theme-nironex .lira-site-main-btn:hover,
+body.theme-nironex .btn-submit:hover,
+body.theme-nironex .login-form .button .btn:hover,
+body.theme-nironex .register-form .button .btn:hover,
+body.theme-nironex .lira-menu-cta-primary:hover {
+    filter: none;
+    background: #14efb3 !important;
+    color: #0d1117 !important;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.16) !important;
+}
+
+body.theme-nironex :is(.btn-primary, .bg-primary, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary):focus,
+body.theme-nironex :is(.btn-primary, .bg-primary, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary):focus-visible,
+body.theme-nironex :is(.btn-primary, .bg-primary, .header .button .btn, .lira-site-main-btn, .btn-submit, .login-form .button .btn, .register-form .button .btn, .lira-menu-cta-primary):active,
+body.theme-nironex .btn-primary.active,
+body.theme-nironex .btn-primary.dropdown-toggle.show,
+body.theme-nironex .btn-check:focus + .btn-primary,
+body.theme-nironex .btn-check:checked + .btn-primary {
+    background: var(--nironex-accent) !important;
+    border-color: rgba(0, 230, 167, 0.85) !important;
+    color: #0d1117 !important;
+}
+
+body.theme-nironex .btn-outline-primary,
+body.theme-nironex .lira-menu-cta-outline {
+    border-color: rgba(0, 230, 167, 0.28) !important;
+    color: var(--nironex-accent) !important;
+    background: rgba(0, 230, 167, 0.04) !important;
+}
+
+body.theme-nironex .btn-outline-primary:hover,
+body.theme-nironex .lira-menu-cta-outline:hover {
+    background: rgba(0, 230, 167, 0.09) !important;
+    border-color: rgba(0, 230, 167, 0.4) !important;
+    color: var(--nironex-text) !important;
+}
+
+body.theme-nironex :is(.btn-outline-primary, .lira-menu-cta-outline):focus,
+body.theme-nironex :is(.btn-outline-primary, .lira-menu-cta-outline):focus-visible,
+body.theme-nironex :is(.btn-outline-primary, .lira-menu-cta-outline):active,
+body.theme-nironex .btn-outline-primary.active,
+body.theme-nironex .btn-outline-primary.dropdown-toggle.show,
+body.theme-nironex .btn-check:focus + .btn-outline-primary,
+body.theme-nironex .btn-check:checked + .btn-outline-primary {
+    background: var(--nironex-accent-soft) !important;
+    border-color: rgba(0, 230, 167, 0.4) !important;
+    color: var(--nironex-text) !important;
+}
+
+body.theme-nironex .text-gold,
+body.theme-nironex .ycolor,
+body.theme-nironex .lira-eyebrow,
+body.theme-nironex .lira-kicker,
+body.theme-nironex .lira-mobile-menu-label,
+body.theme-nironex .lira-dot {
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .lira-site-nav .nav-link:hover,
+body.theme-nironex .lira-site-nav .nav-link.active,
+body.theme-nironex .menu-list .m-link.active,
+body.theme-nironex .menu-list .m-link[aria-expanded="true"],
+body.theme-nironex .lira-sidebar .m-link.active,
+body.theme-nironex .lira-sidebar .m-link[aria-expanded="true"],
+body.theme-nironex .sidebar-nav .nav-link.active,
+body.theme-nironex .lira-admin-nav .nav-link.active,
+body.theme-nironex .lira-mobile-nav-item .nav-link.active {
+    background: rgba(0, 230, 167, 0.08) !important;
+    border-color: rgba(0, 230, 167, 0.18) !important;
+    box-shadow: none !important;
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .table thead th,
+body.theme-nironex .table.dataTable thead th {
+    color: #c6d1e1 !important;
+    background: rgba(255, 255, 255, 0.025) !important;
+}
+
+body.theme-nironex .table tbody td,
+body.theme-nironex .table tbody th,
+body.theme-nironex .dataTables_wrapper,
+body.theme-nironex .dataTables_wrapper .dataTables_info,
+body.theme-nironex .dataTables_wrapper .dataTables_paginate,
+body.theme-nironex .text-muted,
+body.theme-nironex .lira-page-subtitle,
+body.theme-nironex .copyright-text,
+body.theme-nironex .lira-site-footer-copy {
+    color: var(--nironex-muted) !important;
+}
+
+body.theme-nironex .form-control,
+body.theme-nironex .form-select,
+body.theme-nironex .input-group-text,
+body.theme-nironex input[type="search"],
+body.theme-nironex input[type="text"],
+body.theme-nironex input[type="email"],
+body.theme-nironex input[type="password"],
+body.theme-nironex input[type="number"],
+body.theme-nironex input[type="date"],
+body.theme-nironex input[type="tel"],
+body.theme-nironex textarea,
+body.theme-nironex select,
+body.theme-nironex .lira-modal-input-wrap {
+    background: rgba(255, 255, 255, 0.035) !important;
+    border-color: rgba(167, 176, 192, 0.15) !important;
+    color: var(--nironex-text) !important;
+}
+
+body.theme-nironex .form-control:focus,
+body.theme-nironex .form-select:focus,
+body.theme-nironex input:focus,
+body.theme-nironex textarea:focus,
+body.theme-nironex select:focus,
+body.theme-nironex .lira-modal-input-wrap:focus-within {
+    border-color: rgba(0, 230, 167, 0.36) !important;
+    box-shadow: 0 0 0 4px rgba(0, 230, 167, 0.08) !important;
+}
+
+body.theme-nironex .page-item.active .page-link,
+body.theme-nironex .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+body.theme-nironex .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+body.theme-nironex .scroll-top {
+    background: var(--nironex-accent) !important;
+    border-color: rgba(0, 230, 167, 0.85) !important;
+    color: #0d1117 !important;
+}
+
+body.theme-nironex .alert-warning,
+body.theme-nironex .badge.bg-warning,
+body.theme-nironex .text-bg-warning,
+body.theme-nironex .bg-warning,
+body.theme-nironex .topbar-chip.is-pending,
+body.theme-nironex .lira-topbar-chip.is-pending,
+body.theme-nironex .lira-sidebar-status-chip.is-pending,
+body.theme-nironex .lira-status-pill.is-warning,
+body.theme-nironex .lira-status-pill.is-pending,
+body.theme-nironex .lira-result-chip.is-warning,
+body.theme-nironex .lira-admin-user-chip.is-warning,
+body.theme-nironex .lira-robot-lock-note.is-warning,
+body.theme-nironex .lira-status-box.is-warning,
+body.theme-nironex .inactive-robot-badge,
+body.theme-nironex .lira-inline-warning,
+body.theme-nironex .lira-warning-icon-shell {
+    background: var(--nironex-warning-soft) !important;
+    border-color: var(--nironex-warning-border) !important;
+    color: var(--nironex-warning-text) !important;
+}
+
+body.theme-nironex .text-warning,
+body.theme-nironex .link-warning,
+body.theme-nironex .lira-alert-item.is-warning .lira-alert-icon,
+body.theme-nironex .lira-stat-icon.is-warning-icon,
+body.theme-nironex .lira-metric-tile.is-warning .lira-metric-tile-icon,
+body.theme-nironex .lira-admin-user-stat.is-warning .lira-admin-user-stat-icon,
+body.theme-nironex .lira-admin-transaction-stat.is-warning .lira-admin-transaction-stat-icon,
+body.theme-nironex .lira-admin-request-stat.is-warning .lira-admin-request-stat-icon {
+    color: var(--nironex-warning-text) !important;
+}
+
+body.theme-nironex .btn-warning {
+    background: var(--nironex-warning) !important;
+    border-color: var(--nironex-warning) !important;
+    color: #f4f6fa !important;
+}
+
+body.theme-nironex .btn-warning:hover,
+body.theme-nironex .btn-warning:focus,
+body.theme-nironex .btn-warning:focus-visible,
+body.theme-nironex .btn-warning:active,
+body.theme-nironex .btn-warning.active,
+body.theme-nironex .btn-warning.dropdown-toggle.show,
+body.theme-nironex .btn-check:focus + .btn-warning,
+body.theme-nironex .btn-check:checked + .btn-warning {
+    background: #8b75ff !important;
+    border-color: #8b75ff !important;
+    color: #f4f6fa !important;
+}
+
+body.theme-nironex .btn-outline-warning {
+    background: rgba(120, 97, 255, 0.06) !important;
+    border-color: var(--nironex-warning-border) !important;
+    color: var(--nironex-warning-text) !important;
+}
+
+body.theme-nironex .btn-outline-warning:hover,
+body.theme-nironex .btn-outline-warning:focus,
+body.theme-nironex .btn-outline-warning:focus-visible,
+body.theme-nironex .btn-outline-warning:active,
+body.theme-nironex .btn-outline-warning.active,
+body.theme-nironex .btn-outline-warning.dropdown-toggle.show,
+body.theme-nironex .btn-check:focus + .btn-outline-warning,
+body.theme-nironex .btn-check:checked + .btn-outline-warning {
+    background: var(--nironex-warning-soft) !important;
+    border-color: var(--nironex-warning-border) !important;
+    color: #f4f6fa !important;
+}
+
+body.theme-nironex .dropdown-item:active,
+body.theme-nironex .dropdown-item.active,
+body.theme-nironex .list-group-item-action:active,
+body.theme-nironex .page-link:focus,
+body.theme-nironex .page-link:active {
+    background: var(--nironex-accent-soft) !important;
+    border-color: rgba(0, 230, 167, 0.24) !important;
+    color: var(--nironex-accent) !important;
+    box-shadow: none !important;
+}
+
+body.theme-nironex .alert-danger,
+body.theme-nironex .btn-danger,
+body.theme-nironex .bg-danger,
+body.theme-nironex .badge.bg-danger {
+    background: rgba(255, 107, 129, 0.12) !important;
+    border-color: rgba(255, 107, 129, 0.2) !important;
+    color: #ff9aad !important;
+}
+
+body.theme-nironex .badge.bg-success,
+body.theme-nironex .alert-success {
+    background: rgba(0, 230, 167, 0.12) !important;
+    border-color: rgba(0, 230, 167, 0.2) !important;
+    color: #86ffd8 !important;
+}
+
+body.theme-nironex .badge.bg-info,
+body.theme-nironex .alert-info {
+    background: rgba(56, 189, 248, 0.12) !important;
+    border-color: rgba(56, 189, 248, 0.2) !important;
+    color: #9ce4ff !important;
+}
+
+body.theme-nironex .lira-site-mobile-toggle,
+body.theme-nironex .navbar-toggler,
+body.theme-nironex .lira-admin-menu-btn,
+body.theme-nironex .sidebar-close-btn {
+    border-color: rgba(0, 230, 167, 0.18) !important;
+    background: rgba(0, 230, 167, 0.05) !important;
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .lira-site-mobile-toggle-hamburger .toggler-icon,
+body.theme-nironex .navbar-toggler .toggler-icon {
+    background-color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .niro-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--nironex-text) !important;
+    vertical-align: baseline;
+}
+
+body.theme-nironex .niro-logo__wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    font-family: "Poppins", "Cairo", sans-serif !important;
+    font-size: 1.72rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.07em;
+    color: var(--nironex-text) !important;
+    text-transform: none;
+}
+
+body.theme-nironex .niro-logo__word-base {
+    color: var(--nironex-text) !important;
+}
+
+body.theme-nironex .niro-logo__word-accent {
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex :is(.hp-tone-teal, .hp-hero-caption-mark, .lira-eyebrow, .lira-page-title, .lira-page-subtitle) .niro-logo,
+body.theme-nironex :is(.hp-tone-teal, .hp-hero-caption-mark, .lira-eyebrow, .lira-page-title, .lira-page-subtitle) .niro-logo__wordmark {
+    font-family: "Poppins", "Cairo", sans-serif !important;
+    letter-spacing: -0.07em !important;
+}
+
+body.theme-nironex .hp-section-title .niro-logo__wordmark {
+    font-size: 1em;
+}
+
+body.theme-nironex .hp-hero-caption-mark .niro-logo__wordmark {
+    font-size: 1.15rem;
+}
+
+body.theme-nironex .navbar-brand .niro-logo__wordmark,
+body.theme-nironex .lira-site-mobile-brand .niro-logo__wordmark,
+body.theme-nironex .lira-admin-sidebar-brand .niro-logo__wordmark,
+body.theme-nironex .lira-sidebar-brand .niro-logo__wordmark {
+    font-size: 1.52rem;
+}
+
+@media (max-width: 991.98px) {
+    body.theme-nironex .niro-logo {
+        gap: 0;
+    }
+
+    body.theme-nironex .niro-logo__wordmark {
+        font-size: 1.26rem;
+    }
+}
+
+body.theme-nironex,
+body.theme-nironex * {
+    scrollbar-color: #00e6a7 #0b0f15 !important;
+}
+
+body.theme-nironex ::-webkit-scrollbar-thumb {
+    background-color: #00e6a7 !important;
+}
+
+body.theme-nironex ::-webkit-scrollbar-thumb:hover {
+    background-color: #38bdf8 !important;
+}
+
+body.theme-nironex .lira-site-link-btn:hover,
+body.theme-nironex .lira-menu-cta-outline:hover,
+body.theme-nironex .lira-site-footer-social a:hover {
+    color: var(--nironex-accent) !important;
+    background: rgba(0, 230, 167, 0.08) !important;
+    border-color: rgba(0, 230, 167, 0.24) !important;
+}
+
+body.theme-nironex .lira-site-footer,
+body.theme-nironex .lira-auth-page,
+body.theme-nironex .hp-home {
+    background: linear-gradient(180deg, #0d1117 0%, #0c121b 100%) !important;
+}
+
+body.theme-nironex .hp-home::before {
+    background-image: none !important;
+}
+
+body.theme-nironex .hp-home .hp-badge-tag::before {
+    background: var(--nironex-accent) !important;
+    box-shadow: none !important;
+}
+
+body.theme-nironex .hp-home .hp-btn-gold,
+body.theme-nironex .hp-home .hp-btn-hero,
+body.theme-nironex .hp-home .hp-cta-demo-btn:hover {
+    background: var(--nironex-accent) !important;
+    border-color: rgba(0, 230, 167, 0.85) !important;
+    color: #0d1117 !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16) !important;
+}
+
+body.theme-nironex .plan-card-dark:hover,
+body.theme-nironex .lira-plan-card.is-featured {
+    border-color: rgba(0, 230, 167, 0.28) !important;
+    background: rgba(18, 24, 38, 0.96) !important;
+}
+
+body.theme-nironex .plan-icon-wrapper,
+body.theme-nironex .lira-plan-featured-badge,
+body.theme-nironex .lira-auth-badge,
+body.theme-nironex .lira-verify-icon,
+body.theme-nironex .lira-auth-point-icon,
+body.theme-nironex .lira-ref-chip {
+    background: rgba(0, 230, 167, 0.1) !important;
+    border-color: rgba(0, 230, 167, 0.22) !important;
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .lira-plan-featured-badge {
+    background: rgba(0, 230, 167, 0.12) !important;
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .plan-list li i,
+body.theme-nironex .plan-btn,
+body.theme-nironex .lira-plan-rate-value,
+body.theme-nironex .lira-plan-cta,
+body.theme-nironex .lira-auth-link,
+body.theme-nironex .lira-auth-bottom a {
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .plan-btn,
+body.theme-nironex .lira-plan-cta {
+    border-color: rgba(0, 230, 167, 0.26) !important;
+    background: rgba(0, 230, 167, 0.06) !important;
+}
+
+body.theme-nironex .plan-card-dark:hover .plan-btn,
+body.theme-nironex .lira-plan-cta:hover,
+body.theme-nironex .lira-auth-submit,
+body.theme-nironex .lira-site-main-btn,
+body.theme-nironex .lira-menu-cta-primary {
+    background: var(--nironex-accent) !important;
+    color: #0d1117 !important;
+    border-color: rgba(0, 230, 167, 0.85) !important;
+}
+
+body.theme-nironex .lira-input-wrap .form-control:focus,
+body.theme-nironex .lira-amount-input-wrap:focus-within,
+body.theme-nironex .form-control:focus,
+body.theme-nironex .form-select:focus {
+    border-color: rgba(0, 230, 167, 0.42) !important;
+    box-shadow: 0 0 0 4px rgba(0, 230, 167, 0.08) !important;
+}
+
+body.theme-nironex .lira-shield-icon,
+body.theme-nironex .lira-site-footer-note i,
+body.theme-nironex .lira-site-footer-contact i {
+    color: var(--nironex-accent) !important;
+}
+
+body.theme-nironex .hp-home .glow-card::before {
+    display: none !important;
+}
+
+body.theme-nironex .hp-home .hp-hero-visual-card,
+body.theme-nironex .hp-home .hp-mini-chart-card,
+body.theme-nironex .hp-home .hp-feat-card,
+body.theme-nironex .hp-home .hp-review-card,
+body.theme-nironex .hp-home .hp-user-review-shell,
+body.theme-nironex .hp-home .hp-marquee-shell {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14) !important;
+}
+body.theme-nironex * { -webkit-tap-highlight-color: transparent !important; }
