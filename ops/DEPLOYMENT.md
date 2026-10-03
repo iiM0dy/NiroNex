@@ -22,7 +22,8 @@ After the one-time GitHub connection, run as root:
 bash /var/www/nironex/repository/ops/deploy.sh
 ```
 
-The command pulls `main` with `--ff-only`, builds a separate release, backs up
+The command pulls `main` with `--ff-only`, reloads itself if its script changed,
+builds a separate release, verifies public files are readable by the Nginx user, backs up
 the NiroNex database, applies pending Laravel migrations, checks the application,
 and atomically switches `/var/www/nironex/current`. A failed activation restores
 the previous code release. Database migrations are not automatically reversed;

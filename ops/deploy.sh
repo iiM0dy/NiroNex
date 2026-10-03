@@ -11,7 +11,7 @@ test -f "$BASE/shared/install.complete"
 test -f "$BASE/shared/.env"
 test -d "$BASE/shared/storage"
 test -d "$REPOSITORY/.git"
-for tool in git composer node npm php curl mysqldump gzip flock; do command -v "$tool" >/dev/null; done
+for tool in git composer node npm php curl mysqldump gzip flock python3 sha256sum; do command -v "$tool" >/dev/null; done
 
 exec 9>"$BASE/shared/github-deploy.lock"
 flock -n 9 || { echo 'Another NiroNex deployment is already running.'; exit 1; }
@@ -19,9 +19,15 @@ run_git() { runuser -u nironex -- git -C "$REPOSITORY" "$@"; }
 test "$(run_git remote get-url origin)" = "$EXPECTED_REMOTE"
 test "$(run_git branch --show-current)" = main
 test -z "$(run_git status --porcelain)" || { echo 'The VPS source checkout has local changes; resolve them before deploying.'; exit 1; }
+SCRIPT_DIGEST="$(sha256sum "$REPOSITORY/ops/deploy.sh" | cut -d ' ' -f 1)"
 
 echo '=== Pull NiroNex main ==='
 run_git pull --ff-only origin main
+if [ "$(sha256sum "$REPOSITORY/ops/deploy.sh" | cut -d ' ' -f 1)" != "$SCRIPT_DIGEST" ]; then
+    echo 'Deployment script updated; restarting with the new version.'
+    exec 9>&-
+    exec bash "$REPOSITORY/ops/deploy.sh"
+fi
 COMMIT="$(run_git rev-parse HEAD)"
 PREVIOUS="$(readlink -f "$BASE/current")"
 case "$PREVIOUS" in "$BASE/releases/"*) ;; *) echo 'Unexpected current release path.'; exit 1;; esac
@@ -62,7 +68,7 @@ finish() {
 trap finish EXIT
 
 # Export only versioned application files; live data stays in shared storage.
-run_git archive HEAD | runuser -u nironex -- tar -x -C "$RELEASE" --exclude=storage
+run_git archive HEAD | runuser -u nironex -- bash -c 'umask 022; exec tar -x -C "$1" --exclude=storage' bash "$RELEASE"
 test -f "$RELEASE/artisan"
 test ! -e "$RELEASE/.env"
 test ! -e "$RELEASE/storage"
@@ -74,8 +80,42 @@ COMPOSER_BIN="$(command -v composer)"
 echo '=== Install dependencies and build assets ==='
 runuser -u nironex -- "$COMPOSER_BIN" --working-dir="$RELEASE" install --no-dev --prefer-dist --optimize-autoloader --no-interaction --no-scripts
 runuser -u nironex -- "$COMPOSER_BIN" --working-dir="$RELEASE" check-platform-reqs --no-dev
-runuser -u nironex -- bash -c 'cd "$1" && npm ci --no-audit --no-fund && npm run build && php artisan package:discover --ansi' bash "$RELEASE"
+runuser -u nironex -- bash -c 'umask 022; cd "$1" && npm ci --no-audit --no-fund && npm run build && php artisan package:discover --ansi' bash "$RELEASE"
 test -f "$RELEASE/public/build/manifest.json"
+
+# Nginx runs as www-data, while the application files belong to nironex.
+# Normalize only public files. find does not follow the shared storage symlink,
+# so private documents, database backups and .env retain their permissions.
+find "$RELEASE/public" -type d -exec chmod 0755 {} +
+find "$RELEASE/public" -type f -exec chmod 0644 {} +
+echo '=== Verify Nginx can read public assets ==='
+runuser -u www-data -- python3 - "$RELEASE/public" <<'PY'
+import json
+import os
+import pathlib
+import sys
+
+public = pathlib.Path(sys.argv[1])
+for required in ('index.php', 'build/manifest.json', 'assets/images/home/LOGO-NIRO-3.webp'):
+    with (public / required).open('rb') as stream:
+        stream.read(1)
+manifest = json.loads((public / 'build/manifest.json').read_text())
+for entry in manifest.values():
+    for asset in [entry['file'], *entry.get('css', []), *entry.get('assets', [])]:
+        with (public / 'build' / asset).open('rb') as stream:
+            stream.read(1)
+count = 0
+for directory, directories, files in os.walk(public, followlinks=False):
+    directories[:] = [name for name in directories if not (pathlib.Path(directory) / name).is_symlink()]
+    for name in files:
+        file = pathlib.Path(directory) / name
+        if file.is_symlink():
+            continue
+        with file.open('rb') as stream:
+            stream.read(1)
+        count += 1
+print(f'Nginx user can read {count} public files, including WebP images and built assets.')
+PY
 
 # Pause only NiroNex scheduled jobs and let any running invocation finish.
 if systemctl is-active --quiet nironex-scheduler.timer; then
