@@ -3,7 +3,7 @@
 
 <head>
     @php
-        $brandLogo = asset('assets/images/home/LOGO-NIRO-3.png');
+        $brandLogo = asset('assets/images/home/LOGO-NIRO-3.webp');
         $pageTitle = trim($__env->yieldContent('title'));
         $metaTitle = trim(appName() . ($pageTitle ? ' - ' . $pageTitle : ''));
         $metaDescription = trim($__env->yieldContent('meta_description', 'NiroNex admin control center for users, KYC verification, deposits, withdrawals, robot requests, transactions, and support operations.'));
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="{{ $metaTitle }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $brandLogo }}">
-    <link rel="icon" href="{{ $brandLogo }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/images/logo/niro-icon.svg') }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ $brandLogo }}">
     <meta name="theme-color" content="#0d1117">
 

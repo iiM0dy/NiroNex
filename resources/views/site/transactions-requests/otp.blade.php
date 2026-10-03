@@ -8,7 +8,7 @@
             <div class="card lira-table-card mt-5">
                 <div class="card-header border-0 text-center pb-0">
                     <div class="lira-shield-icon mb-3 mx-auto" style="width: 64px; height: 64px; background: rgba(0,230,167,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <img src="{{ asset('assets/images/icons/IMG_7725.PNG') }}" alt="Security" style="width: 32px; height: 32px; object-fit: contain;">
+                        <img src="{{ asset('assets/images/icons/IMG_7725.svg') }}" alt="Security" style="width: 32px; height: 32px; object-fit: contain;">
                     </div>
                     <h5 class="mb-2">تأكيد عملية السحب</h5>
                     <p class="text-muted small">

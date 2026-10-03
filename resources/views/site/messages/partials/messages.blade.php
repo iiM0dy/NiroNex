@@ -13,7 +13,7 @@
                             @if (auth()->user()->image && file_exists(public_path(auth()->user()->image)))
                                 <img src="{{ asset(auth()->user()->image) }}" alt="User avatar">
                             @else
-                                <img src="{{ asset('assets/images/default-pfp.png') }}" alt="User avatar">
+                                <img src="{{ asset('assets/images/default-pfp.webp') }}" alt="User avatar">
                             @endif
                         @else
                             <span class="lira-chat-admin-icon">
@@ -215,7 +215,7 @@
     <script>
         (function () {
             const userId = {{ auth()->id() }};
-            const userAvatar = `{{ auth()->user()->image && file_exists(public_path(auth()->user()->image)) ? asset(auth()->user()->image) : asset('assets/images/default-pfp.png') }}`;
+            const userAvatar = `{{ auth()->user()->image && file_exists(public_path(auth()->user()->image)) ? asset(auth()->user()->image) : asset('assets/images/default-pfp.webp') }}`;
 
             const processedMessageIds = new Set([
                 @foreach($messages as $msg)

@@ -23,7 +23,7 @@
                             <div class="lira-auth-points">
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7721.PNG') }}" alt="Registration" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7721.svg') }}" alt="Registration" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>1. إنشاء الحساب</strong>
@@ -33,7 +33,7 @@
 
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7725.PNG') }}" alt="Verification" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7725.svg') }}" alt="Verification" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>2. التحقق من الهوية</strong>
@@ -43,7 +43,7 @@
 
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7727.PNG') }}" alt="Activation" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7727.svg') }}" alt="Activation" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>3. تفعيل الخطة</strong>
@@ -62,7 +62,7 @@
 
                             @if(request('ref'))
                                 <div class="lira-ref-chip">
-                                    <img src="{{ asset('assets/images/icons/IMG_7721.PNG') }}" alt="Referral" style="width: 18px; height: 18px; object-fit: contain; margin-inline-end: 8px;">
+                                    <img src="{{ asset('assets/images/icons/IMG_7721.svg') }}" alt="Referral" style="width: 18px; height: 18px; object-fit: contain; margin-inline-end: 8px;">
                                     تسجيل عبر رابط إحالة
                                 </div>
                             @endif
@@ -733,13 +733,13 @@
         }
 
         .iti__flag {
-            background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags.png");
+            background-image: url("{{ asset('assets/images/flags/flags.webp') }}");
         }
 
         @media (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
             .iti__flag {
-                background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/img/flags@2x.png");
+                background-image: url("{{ asset('assets/images/flags/flags@2x.webp') }}");
             }
         }
 

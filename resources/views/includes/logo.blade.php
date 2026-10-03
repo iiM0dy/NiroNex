@@ -1,7 +1,7 @@
 @php
     $asText = $asText ?? false;
     $variant = (string) ($variant ?? '3');
-    $logoSrc = asset('assets/images/home/' . ($variant === '2' ? 'LOGO-NIRO-2.png' : 'LOGO-NIRO-3.png'));
+    $logoSrc = asset('assets/images/home/' . ($variant === '2' ? 'LOGO-NIRO-2.webp' : 'LOGO-NIRO-3.webp'));
 @endphp
 
 <span class="niro-logo {{ $asText ? 'niro-logo--text' : 'niro-logo--image' }}" aria-label="{{ appName() }}">

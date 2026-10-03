@@ -22,7 +22,7 @@
                             <div class="lira-auth-points">
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7727.PNG') }}" alt="Chart" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7727.svg') }}" alt="Chart" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>مراقبة XAUUSD</strong>
@@ -32,7 +32,7 @@
 
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7725.PNG') }}" alt="Shield" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7725.svg') }}" alt="Shield" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>وصول آمن</strong>
@@ -42,7 +42,7 @@
 
                                 <div class="lira-auth-point">
                                     <div class="lira-auth-point-icon">
-                                        <img src="{{ asset('assets/images/icons/IMG_7726.PNG') }}" alt="Lightning" style="width: 24px; height: 24px; object-fit: contain;">
+                                        <img src="{{ asset('assets/images/icons/IMG_7726.svg') }}" alt="Lightning" style="width: 24px; height: 24px; object-fit: contain;">
                                     </div>
                                     <div>
                                         <strong>جاهزية تشغيل</strong>

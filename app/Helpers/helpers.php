@@ -41,39 +41,18 @@ function brandText(?string $text): string
 	$brand = appName();
 	$brandAi = brandAiName();
 
-	return str_replace(
-		[
-			'Pipix Trade',
-			'Pipix AI',
-			'Pipix',
-			'pipix.trade',
-			'pipix',
-			'Lira AI',
-			'Lira',
-			'ليرة',
-			'ليرا',
-			'Dolarak',
-			'dolarak.com',
-			'dolarak',
-			'lira.com',
-		],
-		[
-			$brand,
-			$brandAi,
-			$brand,
-			'nironex.com',
-			$brand,
-			$brandAi,
-			$brand,
-			$brand,
-			$brand,
-			$brand,
-			$brand,
-			$brand,
-			'nironex.com',
-		],
-		$text
-	);
+	return strtr($text, [
+		'Pipix Trade' => $brand,
+		'Pipix AI' => $brandAi,
+		'Pipix' => $brand,
+		'pipix.trade' => 'nironex.com',
+		'pipix' => $brand,
+		'Lira AI' => $brandAi,
+		'Lira' => $brand,
+		'ليرة' => $brand,
+		'ليرا' => $brand,
+		'lira.com' => 'nironex.com',
+	]);
 }
 
 // ROUTE FUNCTIONS

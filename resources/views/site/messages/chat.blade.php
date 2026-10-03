@@ -14,7 +14,7 @@
             </div>
 
             <div class="lira-hero-note">
-                <img src="{{ asset('assets/images/icons/IMG_7723.PNG') }}" alt="Support" style="width: 32px; height: 32px; object-fit: contain; margin-inline-end: 16px;">
+                <img src="{{ asset('assets/images/icons/IMG_7723.svg') }}" alt="Support" style="width: 32px; height: 32px; object-fit: contain; margin-inline-end: 16px;">
                 <div>
                     <strong>جلسة دعم نشطة</strong>
                     <span>يتم تحديث المحادثة بشكل دوري لعرض الرسائل الجديدة.</span>
@@ -28,7 +28,7 @@
                     <div class="lira-chat-header">
                         <div class="lira-chat-header-main">
                             <div class="lira-chat-header-avatar">
-                                <img src="{{ asset('assets/images/icons/IMG_7723.PNG') }}" alt="Support" style="width: 24px; height: 24px; object-fit: contain;">
+                                <img src="{{ asset('assets/images/icons/IMG_7723.svg') }}" alt="Support" style="width: 24px; height: 24px; object-fit: contain;">
                                 <span class="lira-chat-online-dot"></span>
                             </div>
 

@@ -214,7 +214,6 @@ class User extends Authenticatable
             ->where('email', 'not like', 'demo@%')
             ->where('email', 'not like', '%@pipix.%')
             ->where('email', 'not like', '%@lira.%')
-            ->where('email', 'not like', '%@dolarak.%')
             ->where(function (Builder $q) {
                 $q->whereNull('first_name')
                     ->orWhereRaw('LOWER(first_name) != ?', ['demo']);

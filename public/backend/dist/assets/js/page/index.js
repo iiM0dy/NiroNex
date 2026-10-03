@@ -262,10 +262,10 @@ function myMap() {
         zoom: 16,
       });
       const iconBase =
-        "http://pixelwibes.com/template/ebazar/html/dist/assets/images/";
+        "/backend/dist/assets/images/";
       const icons = {
         emb: {
-          icon: iconBase + "shop.png",
+          icon: iconBase + "shop.webp",
         }
       };
       const features = [

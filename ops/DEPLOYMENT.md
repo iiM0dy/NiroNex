@@ -7,7 +7,7 @@ Repository: https://github.com/iiM0dy/NiroNex.git
 Run in the local application directory:
 
 ```powershell
-cd E:\dolarak.com\dolarak.com\public_html
+cd E:\nironex.com\nironex.com
 git status
 git add .
 git commit -m "Describe your change"
@@ -39,5 +39,5 @@ Nginx configuration already use the current release's real path.
 Keep Laravel configuration uncached until the existing application calls to
 `env()` outside configuration files have been moved into configuration files.
 
-The first commit is a clean snapshot. The previous Dolarak Git history is kept
-locally under a `legacy/dolarak-*` branch and is not pushed to NiroNex.
+The first commit is a clean snapshot. The previous project's Git history is kept
+locally under `legacy/nironex-history` and is not pushed to GitHub.

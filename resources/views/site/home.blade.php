@@ -5,15 +5,15 @@
 
 @php
     $homeMedia = [
-        'heroVisual' => asset('assets/images/new-images/IMG_0545.PNG'),
-        'modeVisual' => asset('assets/images/home/ttest.jpeg'),
-        'modeSectionVisual' => asset('assets/images/new-images/tarding-chart1.png'),
-        'modeAiVisual' => asset('assets/images/home/niro-mode-ai.png'),
-        'modeVaultVisual' => asset('assets/images/home/niro-mode-vault.png'),
-        'modeTradeVisual' => asset('assets/images/home/niro-mode-trade.png'),
-        'trustVisual' => asset('assets/images/home/security.PNG'),
-        'platformVisual' => asset('assets/images/new-images/IMG_0549.PNG'),
-        'ctaScene' => asset('assets/images/new-images/sec-4.png'),
+        'heroVisual' => asset('assets/images/new-images/IMG_0545.webp'),
+        'modeVisual' => asset('assets/images/home/ttest.webp'),
+        'modeSectionVisual' => asset('assets/images/new-images/tarding-chart1.webp'),
+        'modeAiVisual' => asset('assets/images/home/niro-mode-ai.webp'),
+        'modeVaultVisual' => asset('assets/images/home/niro-mode-vault.webp'),
+        'modeTradeVisual' => asset('assets/images/home/niro-mode-trade.webp'),
+        'trustVisual' => asset('assets/images/home/security-png.webp'),
+        'platformVisual' => asset('assets/images/new-images/IMG_0549.webp'),
+        'ctaScene' => asset('assets/images/new-images/sec-4.webp'),
     ];
 
     $marketStrip = [
@@ -38,7 +38,7 @@
             'value' => '24/7', 
             'label' => 'متابعة مرنة', 
             'note' => 'قراءة مستمرة للسوق والتنفيذ',
-            'icon' => asset('assets/images/new-icons/IMG_7811.PNG')
+            'icon' => asset('assets/images/new-icons/IMG_7811.svg')
         ],
         [
             'id' => 'ssl',
@@ -4151,7 +4151,7 @@
             border: 1px solid rgba(167, 176, 192, 0.1);
             background:
                 linear-gradient(90deg, rgba(8, 12, 18, 0.94) 0%, rgba(8, 12, 18, 0.78) 48%, rgba(8, 12, 18, 0.42) 100%),
-                url('{{ asset('assets/images/home/niro-final-cta-bg.png') }}') center / cover no-repeat,
+                url('{{ asset('assets/images/home/niro-final-cta-bg.webp') }}') center / cover no-repeat,
                 #0d1117;
             overflow: hidden;
         }
@@ -5999,8 +5999,8 @@
                 @php
                     $accountUser = auth()->user();
                     $accountAvatar = $accountUser->image
-                        ? ($accountUser->getStorageUrl($accountUser->image) ?? asset('assets/images/default-pfp.png'))
-                        : asset('assets/images/default-pfp.png');
+                        ? ($accountUser->getStorageUrl($accountUser->image) ?? asset('assets/images/default-pfp.webp'))
+                        : asset('assets/images/default-pfp.webp');
                     $accountLinks = [
                         ['label' => 'الملف الشخصي', 'icon' => 'profile', 'url' => route('profile')],
                         ['label' => 'الإيداع', 'icon' => 'wallet', 'url' => route('site.deposit')],
@@ -6294,7 +6294,7 @@
                 <div class="hp-features-strip hp-stagger">
                     <div class="hp-feature-item">
                         <div class="hp-feature-icon">
-                            <img src="{{ asset('assets/images/icons/IMG_7725.PNG') }}" alt="Security Icon" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="{{ asset('assets/images/icons/IMG_7725.svg') }}" alt="Security Icon" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <h3 class="hp-feature-title">أمان عالي</h3>
                         <p class="hp-feature-desc">حماية متقدمة لأموالك ومعلوماتك الشخصية</p>

@@ -1,7 +1,7 @@
 <section class="hp-hero">
     <div class="hp-hero-bg" aria-hidden="true">
         <video class="hp-hero-video" autoplay muted loop playsinline preload="auto"
-            poster="{{ $homeMedia['heroPoster'] ?? asset('assets/images/home/hero.jpg') }}">
+            poster="{{ $homeMedia['heroPoster'] ?? asset('assets/images/home/hero.webp') }}">
             <source src="{{ $homeMedia['heroVideo'] ?? asset('assets/video/home/hero-loop.mp4') }}" type="video/mp4">
         </video>
         <!-- A deep dark gradient overlay to ensure text contrast -->

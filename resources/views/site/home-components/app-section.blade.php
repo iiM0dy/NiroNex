@@ -32,7 +32,7 @@
                 <div class="hp-app-visual">
                     <div class="hp-app-glow"></div>
                     <!-- If this image doesn't exist, we fallback to a generic placeholder or the user's available mockup -->
-                    <img src="{{ asset('assets/images/app-devices-mockup.png') }}" onerror="this.src='https://placehold.co/800x600/101623/00e6a7?text=Trading+Platform'" alt="{{ appName() }} Devices" class="img-fluid hp-app-img">
+                    <img src="{{ asset('assets/images/home/app_disck.webp') }}" alt="{{ appName() }} Devices" class="img-fluid hp-app-img">
                 </div>
             </div>
         </div>

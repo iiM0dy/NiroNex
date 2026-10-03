@@ -3,7 +3,7 @@
 
 <head>
     @php
-        $brandLogo = asset('assets/images/home/LOGO-NIRO-3.png');
+        $brandLogo = asset('assets/images/home/LOGO-NIRO-3.webp');
         $pageTitle = trim($__env->yieldContent('title'));
         $isHomePage = request()->routeIs('site.index');
         $metaTitle = $isHomePage || $pageTitle === appName()
@@ -30,7 +30,7 @@
     <meta property="og:url" content="{{ $canonicalUrl }}">
     <meta property="og:image" content="{{ $brandLogo }}">
     <meta property="og:image:secure_url" content="{{ $brandLogo }}">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/webp">
     <meta property="og:image:width" content="3676">
     <meta property="og:image:height" content="3254">
     <meta property="og:image:alt" content="{{ appName() }} logo">
@@ -39,7 +39,7 @@
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $brandLogo }}">
     <meta name="twitter:image:alt" content="{{ appName() }} logo">
-    <link rel="icon" href="{{ $brandLogo }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/images/logo/niro-icon.svg') }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ $brandLogo }}">
     <meta name="theme-color" content="#0d1117">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1152,7 +1152,6 @@
     <script src="{{ asset('assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/js/tiny-slider.js') }}"></script>
     <script src="{{ asset('assets/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('assets/js/count-up.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
         //========= Road Map 

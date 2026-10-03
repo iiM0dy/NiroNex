@@ -3082,7 +3082,7 @@ only screen and (min-width: 1400px) {
 	Road Map CSS
 ========================================*/
 .road-map {
-  background-image: url("../images/road-map/bg.png");
+  background-image: url("../images/bread-bg/banner-bg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

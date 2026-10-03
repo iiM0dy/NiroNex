@@ -1,6 +1,6 @@
 <section class="hp-cta-cinematic text-center">
     <!-- Cinematic Background Image with Overlay -->
-    <div class="hp-cta-bg" style="background-image: url('{{ $homeMedia['ctaScene'] ?? asset('assets/images/home/cta.jpg') }}');">
+    <div class="hp-cta-bg" style="background-image: url('{{ $homeMedia['ctaScene'] ?? asset('assets/images/home/cta.webp') }}');">
         <div class="hp-cta-overlay"></div>
     </div>
 
